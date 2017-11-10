@@ -81,6 +81,7 @@ public abstract class AbstractReport {
 			sb.append(";");
 			sb.append(spectrum.getNodeOfProbe(c).getFullName());
 		}
+		sb.append(";outcome")
 		output.add(sb.toString());
 		
 		for (int t = 0; t < transactions ; t++) {
@@ -95,6 +96,7 @@ public abstract class AbstractReport {
 					sb.append(";0");
 				}
 			}
+			sb.append(spectrum.isError(t) ? ";fail" : ";pass");
 			output.add(sb.toString());
 		}
 		
