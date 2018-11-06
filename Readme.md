@@ -110,6 +110,8 @@ Although `ddu-maven-plugin` works for both Junit3 and Junit4 test cases, please 
 This requirement is due to the fact that Junit only provides their `org.junit.runner.notification.RunListener` API after version 4.6. The listener API is used so that per-test coverage can be gathered.
 For Junit3 test cases, the appropriate test runner will still be used.
 
+Currently, this plugin also does not support test execution forking.
+
 #### argLine
 
 If there is an `argLine` parameter set in the declaration of `maven-surefire-plugin`, that will override `ddu-maven-plugin`'s request to add an agent to the test JVM.
